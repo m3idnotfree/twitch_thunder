@@ -1,0 +1,25 @@
+[package]
+name = "twitch_thunder"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.85"
+description = "thunder"
+documentation = "https://docs.rs/twitch_thunder"
+repository = "https://github.com/m3idnotfree/twitch_thunder"
+license = "MIT OR Apache-2.0"
+keywords = ["twitch"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[workspace]
+members = ["twitch_docs"]
+
+[dependencies]
+serde = { version = "1.0.229", optional = true }
+
+[dev-dependencies]
+twitch_docs = { path = "twitch_docs" }
+
+[features]
+serde = ["dep:serde"]
